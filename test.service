@@ -1,0 +1,11 @@
+[Unit]
+Description=Сервис для запуска скрипта мониторинга
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/test.sh
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
