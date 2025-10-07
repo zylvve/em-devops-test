@@ -15,7 +15,7 @@ while true; do
     new_pid=$(check_pid)
 
     if [ -n "$new_pid" ]; then
-	# Проверяю на перезапуск через id процесса
+		# Проверяю на перезапуск через id процесса
 		if [ "$new_pid" != "$initial_pid" ]; then
 	     	    echo "$(date): Процесс $PROCESS_NAME был перезапущен" >> "$LOGFILE"
 	            initial_pid=$new_pid
